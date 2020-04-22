@@ -13,6 +13,7 @@ struct  HomeView : View {
         ScrollView(.vertical){
             HomeTopScrollView()
             ImageCell()
+           
         }
         
     }

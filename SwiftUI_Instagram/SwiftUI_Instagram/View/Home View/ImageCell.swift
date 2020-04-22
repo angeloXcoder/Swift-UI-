@@ -18,7 +18,10 @@ struct  ImageCell: View {
                 ImageHomeView()
                 BottomButtonsView()
                 Divider()
-                
+                LikeView()
+                AddCommentsView()
+                PostTextView()
+                TimeView()
             }
         }
         
@@ -27,6 +30,6 @@ struct  ImageCell: View {
 
 struct ImageCell_Previews: PreviewProvider {
     static var previews: some View {
-        ImageCell()
+        ImageCell().previewLayout(.sizeThatFits)
     }
 }
