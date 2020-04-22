@@ -7,20 +7,29 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 // MARK: - New Swift file.
 struct  ImageHomeView: View {
+    let imageURL : String
     var body : some View {
-        Image("profile")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width:UIScreen.main.bounds.width,height:350)
+        WebImage(url: URL(string:imageURL))
+            .onSuccess { image, cacheType in
+                
+        }
+        .resizable()
+        .placeholder{
+            Rectangle().foregroundColor(.secondary)
+        }
+        .aspectRatio(contentMode: .fill)
+        .frame(width:UIScreen.main.bounds.width,height:350)
+        .clipped()
         
     }
 }
 
-struct ImageHomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        ImageHomeView()
-    }
-}
+//struct ImageHomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ImageHomeView()
+//    }
+//}

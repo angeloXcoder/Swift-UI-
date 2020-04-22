@@ -10,19 +10,20 @@ import SwiftUI
 
 // MARK: - New Swift file.
 struct  ImageCell: View {
+    @ObservedObject var image = ApiServices()
     var body : some View {
-        ForEach(0 ..< 5) { _ in
-            VStack {
-                TopPersonView()
-                Divider()
-                ImageHomeView()
-                BottomButtonsView()
-                Divider()
-                LikeView()
-                AddCommentsView()
-                PostTextView()
-                TimeView()
+        ScrollView(.vertical){
+            ForEach(image.dogs.message,id:\.self) { docgImage in
+                VStack {
+                    TopPersonView()
+                    Divider()
+                    ImageHomeView(imageURL: docgImage)
+                    BottomButtonsView()
+                    Divider()
+                    BottomButtonView()
+                }
             }
+            
         }
         
     }

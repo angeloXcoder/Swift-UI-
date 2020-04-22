@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		04998D242450962C00B8382D /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04998D232450962C00B8382D /* TimeView.swift */; };
+		04998D272450C44400B8382D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 04998D262450C44400B8382D /* SDWebImageSwiftUI */; };
+		04998D2A2450C48900B8382D /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04998D292450C48900B8382D /* ApiServices.swift */; };
+		04998D2C2450D5EE00B8382D /* BottomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04998D2B2450D5EE00B8382D /* BottomButtonView.swift */; };
 		04A09EDB245059C70072BF7F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A09EDA245059C70072BF7F /* ProfileView.swift */; };
 		04A09EDD24505ACC0072BF7F /* InfoVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A09EDC24505ACC0072BF7F /* InfoVStackView.swift */; };
 		04A09EE124505B2B0072BF7F /* HomeTopScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A09EE024505B2B0072BF7F /* HomeTopScrollView.swift */; };
@@ -38,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		04998D232450962C00B8382D /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		04998D292450C48900B8382D /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		04998D2B2450D5EE00B8382D /* BottomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonView.swift; sourceTree = "<group>"; };
 		04A09EDA245059C70072BF7F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		04A09EDC24505ACC0072BF7F /* InfoVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVStackView.swift; sourceTree = "<group>"; };
 		04A09EE024505B2B0072BF7F /* HomeTopScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopScrollView.swift; sourceTree = "<group>"; };
@@ -73,12 +78,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04998D272450C44400B8382D /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04998D282450C47500B8382D /* ApiServices */ = {
+			isa = PBXGroup;
+			children = (
+				04998D292450C48900B8382D /* ApiServices.swift */,
+			);
+			path = ApiServices;
+			sourceTree = "<group>";
+		};
 		04A09EDE24505AF80072BF7F /* Home View */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +107,7 @@
 				04A09EFF24508EC40072BF7F /* PostTextView.swift */,
 				04A09F01245090FE0072BF7F /* AddCommentsView.swift */,
 				04998D232450962C00B8382D /* TimeView.swift */,
+				04998D2B2450D5EE00B8382D /* BottomButtonView.swift */,
 			);
 			path = "Home View";
 			sourceTree = "<group>";
@@ -132,6 +147,7 @@
 		04AAA7F5244E2B2A003994E4 /* SwiftUI_Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				04998D282450C47500B8382D /* ApiServices */,
 				04AAA80F244E2B52003994E4 /* Resource */,
 				04AAA80E244E2B41003994E4 /* AppDelegate */,
 				04AAA80D244E2B35003994E4 /* View */,
@@ -194,6 +210,9 @@
 			dependencies = (
 			);
 			name = SwiftUI_Instagram;
+			packageProductDependencies = (
+				04998D262450C44400B8382D /* SDWebImageSwiftUI */,
+			);
 			productName = SwiftUI_Instagram;
 			productReference = 04AAA7F3244E2B2A003994E4 /* SwiftUI_Instagram.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +241,9 @@
 				Base,
 			);
 			mainGroup = 04AAA7EA244E2B2A003994E4;
+			packageReferences = (
+				04998D252450C44400B8382D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 04AAA7F4244E2B2A003994E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -254,6 +276,7 @@
 				04A09EE524505C000072BF7F /* StoryView.swift in Sources */,
 				04AAA7F7244E2B2A003994E4 /* AppDelegate.swift in Sources */,
 				04A09EE124505B2B0072BF7F /* HomeTopScrollView.swift in Sources */,
+				04998D2C2450D5EE00B8382D /* BottomButtonView.swift in Sources */,
 				04AAA7F9244E2B2A003994E4 /* SceneDelegate.swift in Sources */,
 				04A09EFA2450628E0072BF7F /* CompleteYourProfileView.swift in Sources */,
 				04A09F02245090FE0072BF7F /* AddCommentsView.swift in Sources */,
@@ -273,6 +296,7 @@
 				04A09EE724505CD90072BF7F /* ImageCell.swift in Sources */,
 				04A09EE924505F3E0072BF7F /* TopPersonView.swift in Sources */,
 				04A09EED24505F940072BF7F /* BottomButtonsView.swift in Sources */,
+				04998D2A2450C48900B8382D /* ApiServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +488,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04998D252450C44400B8382D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04998D262450C44400B8382D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04998D252450C44400B8382D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		04AAA7FA244E2B2A003994E4 /* SwiftUI_Instagram.xcdatamodeld */ = {
